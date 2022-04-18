@@ -1,0 +1,26 @@
+{
+  "name": "cse341_lindseymyers",
+  "version": "1.0.0",
+  "description": "cse341 coursework",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LMyers1012/cse341.git"
+  },
+  "author": "Lindsey Myers",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LMyers1012/cse341/issues"
+  },
+  "homepage": "https://github.com/LMyers1012/cse341#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
