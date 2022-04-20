@@ -2,10 +2,10 @@
   "name": "cse341_lindseymyers",
   "version": "1.0.0",
   "description": "cse341 coursework",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon app.js"
+    "start": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -18,7 +18,9 @@
   },
   "homepage": "https://github.com/LMyers1012/cse341#readme",
   "dependencies": {
-    "express": "^4.17.3"
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "mongodb": "^4.5.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"

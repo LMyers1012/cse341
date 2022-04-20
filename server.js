@@ -1,0 +1,16 @@
+// require('dotenv').config();
+const express = require('express');
+const app = express();
+const port = process.env.PORT || 3000;
+const mongodb = require('./db/connect');
+
+app.use('/', require('./routes'));
+
+mongodb.initDb((err, mongodb) => {
+  if (err) {
+    console.log(err);
+  } else {
+    app.listen(port);
+    console.log(`Connected to database and listening on port ${port}`);
+  }
+});
