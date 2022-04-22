@@ -17,11 +17,10 @@ function displayAllData(data) {
     let contactName = doc.firstName + " " + doc.lastName;
     let birthday = doc.birthday.slice(0, 10);
     displayTable += `<tr><td>${contactName}</td><td>${doc.email}</td><td>${doc.favoriteColor}</td><td>${birthday}</td></tr>`;
-  })
+  });
   displayTable += "</table>";
 
   document.getElementById('contact').innerHTML = displayTable;
-
 }
 
 getData();
