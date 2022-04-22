@@ -17,6 +17,9 @@ mongodb.initDb((err, mongodb) => {
   if (err) {
     console.log(err);
   } else {
+    app.get('/', function (req, res) {
+      res.sendFile(__dirname + 'frontend/index.html');
+    });
     app.listen(port);
     console.log(`Connected to DB and listening on port ${port}`);
   }
