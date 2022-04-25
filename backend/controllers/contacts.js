@@ -12,18 +12,18 @@ const getAllContacts = async (req, res, next) => {
 
 // Get a single contact by id
 const getContactById = async (req, res, next) => {
-  const userId = new ObjectId(req.params.id);
   const result = await mongodb
     .getDb()
     .db()
     .collection('contacts')
-    .find({ _id: userId });
+    .find({ _id: ObjectId(req.params.id) });
   result.toArray().then((lists) => {
     res.setHeader('Content-Type', 'application/json');
     res.status(200).json(lists);
   });
 };
 
+// Create a new contact
 const createContact = async (req, res, next) => {
   const contact = {
     firstName: req.body.firstName,
@@ -47,8 +47,8 @@ const createContact = async (req, res, next) => {
   }
 };
 
+// Update one contact by Id
 const updateContact = async (req, res, next) => {
-  const userIdToUpdate = new ObjectId(req.params.id);
   const contact = {
     firstName: req.body.firstName,
     lastName: req.body.lastName,
@@ -61,7 +61,7 @@ const updateContact = async (req, res, next) => {
     .getDb()
     .db()
     .collection('contacts')
-    .replaceOne({ _id: userIdToUpdate }, contact);
+    .replaceOne({ _id: ObjectId(req.params.id) }, contact);
   console.log(response);
   if (response.modifiedCount > 0) {
     res.status(204).send();
@@ -72,13 +72,13 @@ const updateContact = async (req, res, next) => {
   }
 };
 
-const deleteContact = async (req, res, next) => {
-  const userIdToDelete = new ObjectId(req.params.id);
+// Delete one contact by Id
+const deleteContactById = async (req, res, next) => {
   const response = await mongodb
     .getDb()
     .db()
     .collection('contacts')
-    .remove({ _id: userIdToDelete }, true);
+    .deleteOne({ _id: ObjectId(req.params.id) }, true);
   console.log(response);
   if (response.deletedCount > 0) {
     res.status(204).send();
@@ -95,5 +95,5 @@ module.exports = {
   getContactById,
   createContact,
   updateContact,
-  deleteContact,
+  deleteContactById,
 };
