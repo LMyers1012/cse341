@@ -31,4 +31,3 @@ const getDb = () => {
 
 // Export functions
 module.exports = { initDb, getDb };
-
