@@ -2,14 +2,13 @@
 // LOCALHOST 
 // **************
 
-### READ FROM LOCALHOST
+### READ ALL from LOCALHOST
 GET http://localhost:8080/contacts 
-### 
+### READ ONE from LOCALHOST
 GET http://localhost:8080/contacts/6260ab666e12ccf345d9a415 
 
 
-
-### CREATE CONTACT AT LOCALHOST
+### CREATE CONTACT on LOCALHOST
 POST http://localhost:8080/contacts HTTP/1.1
 content-type: application/json
 
@@ -21,7 +20,7 @@ content-type: application/json
 "birthday":"05/05/1988"
 }
 
-### PUT CONTACT
+### UPDATE CONTACT on LOCALHOST
 PUT http://localhost:8080/contacts HTTP/1.1
 Content-Type: application/json
 {
@@ -32,20 +31,27 @@ Content-Type: application/json
   "birthday":"12/07/1954"
 }
 
+### DELETE CONTACT on LOCALHOST
+DELETE http://localhost:8080/contacts/6266dda4fa235ad3d043c73f HTTP/1.1
+
+
+
+
+
 
 
 // ********************
 // PRODUCTION Deploy 
 // ********************
 
-### READ from HEROKU
+### READ ALL from HEROKU
 GET https://cse341lindseymyersl02.herokuapp.com/contacts 
-### 
+### READ ONE from HEROKU
 GET https://cse341lindseymyersl02.herokuapp.com/contacts/6260ab666e12ccf345d9a415 
 
 
 
-### CREATE CONTACT ON HEROKU
+### CREATE CONTACT on HEROKU
 POST http://cse341lmyers.herokuapp.com/contacts HTTP/1.1
 Content-Type: application/json
 {
@@ -56,7 +62,7 @@ Content-Type: application/json
   "birthday":"01-20-2013"
 }
 
-### PUT CONTACT ON HEROKU
+### UPDATE CONTACT on HEROKU
 PUT http://cse341lmyers.herokuapp.com/contacts HTTP/1.1
 Content-Type: application/json
 {
@@ -67,3 +73,5 @@ Content-Type: application/json
   "birthday":"12/13/1956"
 }
 
+### DELETE CONTACT on HEROKU
+DELETE http://cse341lmyers.herokuapp.com/contacts/6266dda4fa235ad3d043c73f HTTP/1.1
