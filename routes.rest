@@ -1,19 +1,69 @@
+// **************
 // LOCALHOST 
-### 
+// **************
+
+### READ FROM LOCALHOST
 GET http://localhost:8080/contacts 
 ### 
 GET http://localhost:8080/contacts/6260ab666e12ccf345d9a415 
-### 
-GET http://localhost:8080/contacts/6260ac386e12ccf345d9a416 
-### 
-GET http://localhost:8080/contacts/6260ad836e12ccf345d9a417
 
+
+
+### CREATE CONTACT AT LOCALHOST
+POST http://localhost:8080/contacts HTTP/1.1
+content-type: application/json
+
+{
+"firstName":"Lindsey",
+"lastName":"Myers",
+"email":"mye19007@byui.edu",
+"favoriteColor":"Black",
+"birthday":"05/05/1988"
+}
+
+### PUT CONTACT
+PUT http://localhost:8080/contacts HTTP/1.1
+Content-Type: application/json
+{
+  "firstName":"Ron",
+  "lastName":"Myers",
+  "email":"rammyers@live.com",
+  "favoriteColor":"Red",
+  "birthday":"12/07/1954"
+}
+
+
+
+// ********************
 // PRODUCTION Deploy 
-### 
+// ********************
+
+### READ from HEROKU
 GET https://cse341lindseymyersl02.herokuapp.com/contacts 
 ### 
 GET https://cse341lindseymyersl02.herokuapp.com/contacts/6260ab666e12ccf345d9a415 
-### 
-GET https://cse341lindseymyersl02.herokuapp.com/contacts/6260ac386e12ccf345d9a416 
-### 
-GET https://cse341lindseymyersl02.herokuapp.com/contacts/6260ad836e12ccf345d9a417
+
+
+
+### CREATE CONTACT ON HEROKU
+POST http://cse341lmyers.herokuapp.com/contacts HTTP/1.1
+Content-Type: application/json
+{
+  "firstName":"Charlee",
+  "lastName":"Myers",
+  "email":"doggie@email.com",
+  "favoriteColor":"Grey",
+  "birthday":"01-20-2013"
+}
+
+### PUT CONTACT ON HEROKU
+PUT http://cse341lmyers.herokuapp.com/contacts HTTP/1.1
+Content-Type: application/json
+{
+  "firstName":"Donalene",
+  "lastName":"Myers",
+  "email":"dmyers@live.com",
+  "favoriteColor":"Blue",
+  "birthday":"12/13/1956"
+}
+
