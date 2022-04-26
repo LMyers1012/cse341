@@ -54,9 +54,9 @@ DELETE http://localhost:8080/contacts/6260ac386e12ccf345d9a416 HTTP/1.1
 // ********************
 
 ### READ ALL from HEROKU
-GET https://cse341lindseymyersl02.herokuapp.com/contacts 
+GET https://cse341lmyers.herokuapp.com/contacts 
 ### READ ONE from HEROKU
-GET https://cse341lindseymyersl02.herokuapp.com/contacts/6260ab666e12ccf345d9a415
+GET https://cse341lmyers.herokuapp.com/contacts/6260ab666e12ccf345d9a415
  
 
 
