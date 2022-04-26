@@ -1,3 +1,4 @@
+const { regexpCharClasses } = require('jshint/src/reg');
 const mongodb = require('../db/connect');
 const ObjectId = require('mongodb').ObjectId;
 
@@ -31,6 +32,9 @@ const createContact = async (req, res, next) => {
     email: req.body.email,
     favoriteColor: req.body.favoriteColor,
     birthday: req.body.birthday,
+    favoriteFood: req.body.favoriteFood,
+    height: req.body.height,
+    occupation: req.body.occupation,
   };
 
   const response = await mongodb
@@ -55,6 +59,9 @@ const updateContact = async (req, res, next) => {
     email: req.body.email,
     favoriteColor: req.body.favoriteColor,
     birthday: req.body.birthday,
+    favoriteFood: req.body.favoriteFood,
+    height: req.body.height,
+    occupation: req.body.occupation,
   };
 
   const response = await mongodb

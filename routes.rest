@@ -17,23 +17,31 @@ content-type: application/json
 "lastName":"Myers",
 "email":"mye19007@byui.edu",
 "favoriteColor":"Black",
-"birthday":"05/05/1988"
+"birthday":"05/05/1988",
+"favoriteFood":"Thom Kha Gai",
+"height":"5'5\"",
+"occupation":"Student"
 }
 
+
 ### UPDATE CONTACT on LOCALHOST (Please paste in _id of correct item to update)
-PUT http://localhost:8080/contacts/6260ac386e12ccf345d9a416 HTTP/1.1
+PUT http://localhost:8080/contacts/6260ad836e12ccf345d9a417 HTTP/1.1
 Content-Type: application/json
 
+//Update favoriteColor
 {
-  "firstName":"Zoey",
+  "firstName":"Zayden",
   "lastName":"Myers",
-  "email":"zmyers101@outlook.com",
-  "favoriteColor":"Purple",
-  "birthday":"10/10/2011"
+  "email":"zmyers8@outlook.com",
+  "favoriteColor":"Red",
+  "birthday":"08/12/2013",
+  "favoriteFood":"Sushi",
+  "height":"4'6\"",
+  "occupation":"Student"
 }
 
 ### DELETE CONTACT on LOCALHOST (Please paste in _id of correct item to delete)
-DELETE http://localhost:8080/contacts/6260ad836e12ccf345d9a417 HTTP/1.1
+DELETE http://localhost:8080/contacts/6260ac386e12ccf345d9a416 HTTP/1.1
 
 
 
@@ -62,20 +70,27 @@ Content-Type: application/json
   "lastName":"Myers",
   "email":"doggie@email.com",
   "favoriteColor":"Grey",
-  "birthday":"01-20-2013"
+  "birthday":"01-20-2013",
+  "favoriteFood":"Fish",
+  "height":"10\"",
+  "occupation":"Door Guard"
 }
 
 ### UPDATE CONTACT on HEROKU (Please paste in _id of correct item to update)
 PUT http://cse341lmyers.herokuapp.com/contacts/6260ad836e12ccf345d9a417 HTTP/1.1
 Content-Type: application/json
 
+// Update favoriteColor
 {
   "firstName":"Zayden",
   "lastName":"Myers",
   "email":"zmyers8@outlook.com",
   "favoriteColor":"Red",
-  "birthday":"08/12/2013"
+  "birthday":"08/12/2013",
+  "favoriteFood":"Sushi",
+  "height":"4'6\"",
+  "occupation":"Student"
 }
 
 ### DELETE CONTACT on HEROKU (Please paste in _id of correct item to delete)
-DELETE http://cse341lmyers.herokuapp.com/contacts/6260ac386e12ccf345d9a416 HTTP/1.1
+DELETE http://cse341lmyers.herokuapp.com/contacts/6260ad836e12ccf345d9a417 HTTP/1.1
