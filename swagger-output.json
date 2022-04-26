@@ -1,8 +1,8 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "My API",
-    "description": "Description",
+    "title": "Lindsey Myers - API",
+    "description": "CSE 341",
     "version": "1.0.0"
   },
   "host": "cse341lmyers.herokuapp.com",
