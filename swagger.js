@@ -5,7 +5,7 @@ const doc = {
     title: 'My API',
     description: 'Description',
   },
-  host: 'https://cse341lmyers.herokuapp.com/',
+  host: 'https://cse341lmyers.herokuapp.com',
   schemes: ['http'],
 };
 
