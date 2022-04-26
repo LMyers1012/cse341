@@ -1,4 +1,3 @@
-const { regexpCharClasses } = require('jshint/src/reg');
 const mongodb = require('../db/connect');
 const ObjectId = require('mongodb').ObjectId;
 
