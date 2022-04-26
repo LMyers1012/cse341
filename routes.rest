@@ -93,4 +93,4 @@ Content-Type: application/json
 }
 
 ### DELETE CONTACT on HEROKU (Please paste in _id of correct item to delete)
-DELETE http://cse341lmyers.herokuapp.com/contacts/6260ad836e12ccf345d9a417 HTTP/1.1
+DELETE http://cse341lmyers.herokuapp.com/contacts/62674c20d86fb57c2ea15e51 HTTP/1.1

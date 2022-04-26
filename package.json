@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "start": "nodemon server.js",
+    "swagger": "node ./swagger.js"
   },
   "repository": {
     "type": "git",
@@ -24,7 +25,10 @@
     "mongodb": "^4.5.0"
   },
   "devDependencies": {
+    "curl": "^0.1.4",
     "eslint": "^8.14.0",
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.15",
+    "swagger-autogen": "^2.21.1",
+    "swagger-ui-express": "^4.3.0"
   }
 }
